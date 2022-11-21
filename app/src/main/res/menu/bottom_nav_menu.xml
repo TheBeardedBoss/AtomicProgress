@@ -15,6 +15,11 @@
         android:title="Quotes"
         />
     <item
+        android:id="@+id/exerciseNavigation"
+        android:icon="@drawable/ic_icons8_exercise_24"
+        android:title="Exercise"
+        />
+    <item
         android:id="@+id/settingsNavigation"
         android:icon="@drawable/ic_baseline_settings_24"
         android:title="Settings"

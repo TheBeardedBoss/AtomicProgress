@@ -4,7 +4,7 @@
 
     style="@style/standardLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HomeFragment">
+    tools:context=".Controller.Fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
