@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.example.atomicprogress.Controller.Fragments.ExcerciseFragment;
 import com.example.atomicprogress.Controller.Fragments.HomeFragment;
@@ -35,24 +36,25 @@ public class MainActivity extends AppCompatActivity {
         //Bottom Navigation code!
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
+        showFragment(homeFragment);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.homeNavigation:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
+                        showFragment(homeFragment);
                         return true;
                     case R.id.musicNavigation:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,musicFragment).commit();
+                        showFragment(musicFragment);
                         return true;
                     case R.id.quoteNavigation:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,quotesFragment).commit();
+                        showFragment(quotesFragment);
                         return true;
                     case R.id.exerciseNavigation:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,excerciseFragment).commit();
+                        showFragment(excerciseFragment);
                         return true;
                     case R.id.settingsNavigation:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,settingsFragment).commit();
+                        showFragment(settingsFragment);
                         return true;
 
 
@@ -65,5 +67,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         //
+    }
+
+    private void showFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
     }
 }
