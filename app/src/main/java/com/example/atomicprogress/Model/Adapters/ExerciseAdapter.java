@@ -54,7 +54,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
     }
 
 
-    static class ExerciseViewHolder extends RecyclerView.ViewHolder {
+    static class   ExerciseViewHolder extends RecyclerView.ViewHolder {
         TextView exerciseNameTextView;
         TextView exerciseTypeTextView;
         TextView exerciseDescriptionTextView;

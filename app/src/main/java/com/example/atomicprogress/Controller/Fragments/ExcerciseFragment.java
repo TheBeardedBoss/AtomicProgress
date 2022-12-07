@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.atomicprogress.Model.Adapters.ExerciseAdapter;
 import com.example.atomicprogress.Model.Interfaces.Exercise;
 import com.example.atomicprogress.Model.Repository.ExercisesRepositoryFactory;
 import com.example.atomicprogress.R;
@@ -30,6 +31,7 @@ public class ExcerciseFragment extends Fragment {
         exerciseRecyclerView = view.findViewById(R.id.exerciseRecyclerView);
         List<Exercise> exerciseList =ExercisesRepositoryFactory.getExercisesRepository().getExercise();
         exerciseRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        exerciseRecyclerView.setAdapter((new ExerciseAdapter(exerciseList, getActivity())));
 
 
 
