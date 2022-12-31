@@ -7,6 +7,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/motivationTitleTextView"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         app:layout_constraintRight_toLeftOf="parent"
@@ -15,8 +16,74 @@
         android:textSize="25dp"
         android:text="You're Daily Dose of Motivation!"
         />
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+    <TextView
+        android:id="@+id/quoteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:minHeight="200dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="quoteText"
+        android:gravity="center"
+        android:background="@drawable/round_back_transparent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+            />
+    <TextView
+        android:id="@+id/authorNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="writers name"
+        app:layout_constraintTop_toBottomOf="@+id/quoteTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/previousButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textAllCaps="false"
+        android:text="Previous"
+        android:background="@drawable/round_back_blue"/>
+
+    <ImageView
+        android:id="@+id/copyButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/nextButton"
+        app:layout_constraintRight_toRightOf="@id/nextButton"
+        app:layout_constraintLeft_toLeftOf="@+id/previousButton"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_back_transparent"
+        android:src="@drawable/copy_icon" />
+<!--        android:background="@drawable/round_back_transparent10"/>-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAllCaps="false"
+        android:text="Next"
+        android:background="@drawable/round_back_blue"/>
+
+
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

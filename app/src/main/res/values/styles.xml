@@ -5,6 +5,13 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:padding">16dp</item>
-        <item name="android:background">@color/dark_grey</item>
+        <item name="android:background">@color/shadow_blue</item>
+    </style>
+    <style name="RecyclerViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/shadow_blue</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">16dp</item>
     </style>
 </resources>

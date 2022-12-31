@@ -10,4 +10,5 @@
     <color name="grey"> #CCCCCC</color>
     <color name="dark_grey">#222222</color>
     <color name="shadow_blue">#778ba5</color>
+    <color name="exercise_background_2">#77A598</color>
 </resources>

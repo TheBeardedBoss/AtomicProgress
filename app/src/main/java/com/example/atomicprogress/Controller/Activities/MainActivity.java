@@ -6,13 +6,11 @@ import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.example.atomicprogress.Controller.Fragments.ExcerciseFragment;
+import com.example.atomicprogress.Controller.Fragments.ExerciseFragment;
 import com.example.atomicprogress.Controller.Fragments.HomeFragment;
 import com.example.atomicprogress.Controller.Fragments.MusicFragment;
 import com.example.atomicprogress.Controller.Fragments.QuotesFragment;
 import com.example.atomicprogress.Controller.Fragments.SettingsFragment;
-import com.example.atomicprogress.Model.Repository.ExercisesRepositoryFactory;
-import com.example.atomicprogress.Model.Repository.HardcodedExercisesRepository;
 import com.example.atomicprogress.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -23,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment homeFragment = new HomeFragment();
     MusicFragment musicFragment = new MusicFragment();
     QuotesFragment quotesFragment = new QuotesFragment();
-    ExcerciseFragment excerciseFragment = new ExcerciseFragment();
+    ExerciseFragment exerciseFragment = new ExerciseFragment();
     SettingsFragment settingsFragment = new SettingsFragment();
 
 
@@ -51,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         showFragment(quotesFragment);
                         return true;
                     case R.id.exerciseNavigation:
-                        showFragment(excerciseFragment);
+                        showFragment(exerciseFragment);
                         return true;
                     case R.id.settingsNavigation:
                         showFragment(settingsFragment);

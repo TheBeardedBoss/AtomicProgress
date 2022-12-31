@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controller.Activities.ProjectsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/projectsToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/shadow_blue" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addProjectsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/projectsToolBar"
+        android:background="@drawable/round_back_blue"
+        android:drawableLeft="@drawable/ic_baseline_playlist_add_24"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/projectOneButton"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/addProjectsButton"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_blue_buttons"
+        android:drawableLeft="@drawable/ic_baseline_workspaces_24"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/projectTwoButton"
+        app:layout_constraintTop_toBottomOf="@+id/projectOneButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_blue_buttons"
+        android:drawableLeft="@drawable/ic_baseline_workspaces_24"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/projectThreeButton"
+        app:layout_constraintTop_toBottomOf="@+id/projectTwoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_blue_buttons"
+        android:drawableLeft="@drawable/ic_baseline_workspaces_24"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/projectFourButton"
+        app:layout_constraintTop_toBottomOf="@+id/projectThreeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_blue_buttons"
+        android:drawableLeft="@drawable/ic_baseline_workspaces_24"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/projectFiveButton"
+        app:layout_constraintTop_toBottomOf="@+id/projectFourButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_blue_buttons"
+        android:drawableLeft="@drawable/ic_baseline_workspaces_24"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/projectSixButton"
+        app:layout_constraintTop_toBottomOf="@+id/projectFiveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_blue_buttons"
+        android:drawableLeft="@drawable/ic_baseline_workspaces_24"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

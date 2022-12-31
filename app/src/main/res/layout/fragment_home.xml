@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
     style="@style/standardLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Controller.Fragments.HomeFragment">
@@ -11,7 +11,7 @@
 
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/GetStartedTextView"
+        app:layout_constraintBottom_toTopOf="@+id/getStartedButton"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -20,28 +20,30 @@
         android:layout_marginBottom="30sp"
         android:src="@drawable/main_activity_image_1"/>
 
-    <Button
-        android:id="@+id/GetStartedTextView"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/getStartedButton"
         android:layout_width="0dp"
         android:layout_height="80sp"
         android:text="Get Started!"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/round_back_blue"
         android:layout_marginTop="30sp"/>
 
-    <Button
-        android:id="@+id/ProjectsTextView"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/projectsButton"
         android:layout_width="0dp"
         android:layout_height="80sp"
+        android:textColor="@color/black"
         android:text="Projects!"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/GetStartedTextView"
+        app:layout_constraintTop_toBottomOf="@id/getStartedButton"
+        android:background="@drawable/round_back_blue"
         android:layout_marginTop="30sp"
-        android:shadowColor="@color/black"
-        android:textColor="@color/black"
         />
 
 

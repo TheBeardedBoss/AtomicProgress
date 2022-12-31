@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,8 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.atomicprogress.Model.Interfaces.Exercise;
 import com.example.atomicprogress.R;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -37,13 +36,19 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
     //binds data to view
     @Override
     public void onBindViewHolder(@NonNull ExerciseViewHolder holder, int position) {
-        bindExercise(holder,exerciseList.get(position));
+        bindExercise(holder,exerciseList.get(position),position);
 
     }
 
-    private void bindExercise(ExerciseViewHolder holder, Exercise exercise) {
+    private void bindExercise(ExerciseViewHolder holder, Exercise exercise, int position) {
         holder.exerciseNameTextView.setText(exercise.getExerciseName());
         holder.exerciseTypeTextView.setText(exercise.getExerciseType());
+        if (position % 2 == 0) {
+            holder.containerLayout.setBackgroundColor(context.getResources().getColor(R.color.exercise_background_2));
+        } else {
+            holder.containerLayout.setBackgroundColor(context.getResources().getColor(R.color.shadow_blue));
+        }
+
     }
 
     //returns item count ~~ easy
@@ -57,6 +62,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
     static class   ExerciseViewHolder extends RecyclerView.ViewHolder {
         TextView exerciseNameTextView;
         TextView exerciseTypeTextView;
+        LinearLayout containerLayout;
         TextView exerciseDescriptionTextView;
         TextView exerciseMuscleTextView;
         TextView exerciseDifficultyTextView;
@@ -64,6 +70,8 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
             super(itemView);
             exerciseNameTextView = itemView.findViewById(R.id.exerciseNameTextView);
             exerciseTypeTextView = itemView.findViewById(R.id.exerciseTypeTextView);
+            containerLayout = itemView.findViewById(R.id.containerLayout);
+
         }
     }
 }
