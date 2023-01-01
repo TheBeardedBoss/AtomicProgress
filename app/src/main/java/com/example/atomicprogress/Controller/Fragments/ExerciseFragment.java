@@ -72,7 +72,7 @@ public class ExerciseFragment extends Fragment  implements GetExercisesCallback 
 
     @Override
     public void onSuccess(SearchResponse data) {
-        Toast.makeText(getActivity(),"" + data.getName(), Toast.LENGTH_SHORT);
+        Toast.makeText(getActivity(),"" + data.getExercises(), Toast.LENGTH_SHORT);
         exerciseRecyclerView.setAdapter((new ExerciseAdapter(data.getExercises(), getActivity())));
 
     }
