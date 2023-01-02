@@ -1,7 +1,6 @@
 package com.example.atomicprogress.Model.Repository.Exercise_Models;
 
 import com.example.atomicprogress.Model.Interfaces.Exercise;
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -14,7 +13,9 @@ public class SearchResponse {
     @SerializedName("exercises")
     private List<ExerciseModel> exercises;
 
-
+    public SearchResponse(List<ExerciseModel> exercises) {
+        this.exercises = exercises;
+    }
 
 
     // Added List parameter
@@ -85,7 +86,7 @@ public class SearchResponse {
 //    private String instructions;
 //
 //    @SerializedName("exercises")
-//    private List<ExerciseModel> exercices;
+//    private List<ExerciseModel> exercises;
 //
 //
 ////    public SearchResponse(String name) {
