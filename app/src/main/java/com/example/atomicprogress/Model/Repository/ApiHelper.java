@@ -7,6 +7,7 @@ import com.example.atomicprogress.Model.Repository.Exercise_Models.SearchRespons
 import com.example.atomicprogress.Model.Repository.Services.ExerciseService;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -36,13 +37,13 @@ public class ApiHelper {
     }
     public void searchExercices(String searchTerm, GetExercisesCallback callback){
         ExerciseService exerciseService = retrofit.create(ExerciseService.class);
-        Call<SearchResponse> call = exerciseService.searchExercises(searchTerm);
-        call.enqueue(new Callback<SearchResponse>() {
+        Call<List<SearchResponse>> call = exerciseService.searchExercises(searchTerm);
+        call.enqueue(new Callback<List<SearchResponse>>() {
             @Override
-            public void onResponse(Call<SearchResponse> call, Response<SearchResponse> response) {
+            public void onResponse(Call<List<SearchResponse>> call, Response<List<SearchResponse>> response) {
 
                 if (response.isSuccessful()){
-                    SearchResponse body = response.body();
+                    SearchResponse body = new SearchResponse(response.body());
                     callback.onSuccess(body);
 
 
@@ -54,7 +55,7 @@ public class ApiHelper {
             }
 
             @Override
-            public void onFailure(Call<SearchResponse> call, Throwable t) {
+            public void onFailure(Call<List<SearchResponse>> call, Throwable t) {
                 callback.onFailure("Check your internet");
                 t.printStackTrace();
 

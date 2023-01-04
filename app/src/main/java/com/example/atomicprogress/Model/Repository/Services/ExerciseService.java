@@ -12,7 +12,6 @@ import retrofit2.http.Query;
 
 public interface ExerciseService {
     @Headers("X-Api-Key: JuSkjRpuHdq/LoEmMcJH+A==CzXnSiUaSSz0vQg7")
-    @GET("/v1/exercises")
-    Call<List<SearchResponse>>searchExercises(@Query("q") String SearchTerm);
-     //Call<SearchResponse> searchExercises(@Query("q") String SearchTerm);
+    @GET("/v1/exercises/")
+    Call<List<SearchResponse>> searchExercises(@Query("q") String SearchTerm);
 }
