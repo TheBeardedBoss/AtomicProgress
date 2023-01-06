@@ -1,27 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     style="@style/RecyclerViewStyle"
     android:id="@+id/containerLayout">
 
-    
+
+    <ImageView
+        android:id="@+id/exerciseImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dbz_image"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
     <TextView
-        android:text="This is some exercise"
+        tools:text="Rickshaw Carry"
         android:id="@+id/exerciseNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:layout_gravity="right"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/exerciseImageView"
+        android:layout_marginStart="5dp"
         />
 
     <TextView
-        android:text="This is a description of an exercise"
+        tools:text="strongman"
         android:id="@+id/exerciseTypeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:layout_gravity="right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/exerciseImageView"
+        android:layout_marginStart="40dp"
+        android:textAllCaps="true"
+        android:textSize="23sp"
+        android:textColor="@color/darkBlueText"
         />
 
-</LinearLayout>
+
+    <TextView
+        tools:text="forearms"
+        android:id="@+id/exerciseMuscleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/exerciseTypeTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAllCaps="true"
+        android:textSize="23sp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/darkBlueText"
+
+        />
+    <TextView
+        tools:text="other"
+        android:id="@+id/exerciseEquipmentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        app:layout_constraintLeft_toRightOf="@id/exerciseImageView"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseTypeTextView"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="6dp"
+        android:textAllCaps="true"
+        android:textSize="23sp"
+        android:textColor="@color/darkBlueText"
+
+        />
+    <TextView
+        tools:text="beginner"
+        android:id="@+id/exerciseDifficultyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        app:layout_constraintLeft_toRightOf="@id/exerciseEquipmentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseMuscleTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="5dp"
+        android:textAllCaps="true"
+        android:layout_marginTop="6dp"
+        android:textSize="23sp"
+        android:textColor="@color/darkBlueText"
+
+        />
+
+    <TextView
+        tools:text="Position the frame at the starting point, and load with the appropriate weight. Standing in the center of the frame, begin by gripping the handles and driving through your heels to lift the frame. Ensure your chest and head are up and your back is straight. Immediately begin walking briskly with quick, controlled steps. Keep your chest up and head forward, and make sure you continue breathing. Bring the frame to the ground after you have reached the end point."
+        android:id="@+id/exerciseInstructionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/exerciseNameTextView"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

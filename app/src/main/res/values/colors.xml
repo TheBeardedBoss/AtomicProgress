@@ -11,4 +11,5 @@
     <color name="dark_grey">#222222</color>
     <color name="shadow_blue">#778ba5</color>
     <color name="exercise_background_2">#77A598</color>
+    <color name="darkBlueText">#ff0099cc</color>
 </resources>

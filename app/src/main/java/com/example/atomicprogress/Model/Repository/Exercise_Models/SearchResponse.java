@@ -90,6 +90,26 @@ public class SearchResponse implements Exercise {
         return this.getType();
     }
 
+    @Override
+    public String getExerciseMuscle() {
+        return this.getMuscle();
+    }
+
+    @Override
+    public String getExerciseEquipment() {
+        return this.getEquipment();
+    }
+
+    @Override
+    public String getExerciseDifficulty() {
+        return this.getDifficulty();
+    }
+
+    @Override
+    public String getExerciseInstructions() {
+        return this.getInstructions();
+    }
+
     public List<Exercise> getExercises() {
         List<Exercise> exerciseList = new ArrayList<>();
         exerciseList.addAll(exercises);

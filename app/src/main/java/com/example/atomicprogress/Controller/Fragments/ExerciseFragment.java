@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,14 +16,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.atomicprogress.Model.Adapters.ExerciseAdapter;
-import com.example.atomicprogress.Model.Interfaces.Exercise;
 import com.example.atomicprogress.Model.Repository.ApiHelper;
 import com.example.atomicprogress.Model.Repository.CallBacks.GetExercisesCallback;
 import com.example.atomicprogress.Model.Repository.Exercise_Models.SearchResponse;
-import com.example.atomicprogress.Model.Repository.ExercisesRepositoryFactory;
 import com.example.atomicprogress.R;
-
-import java.util.List;
 
 
 public class ExerciseFragment extends Fragment  implements GetExercisesCallback {
@@ -32,7 +27,7 @@ public class ExerciseFragment extends Fragment  implements GetExercisesCallback 
     View view;
     RecyclerView exerciseRecyclerView;
     private ApiHelper apiHelper;
-    private TextView numberOfResultsTextView;
+
 
 
     @Override
@@ -43,7 +38,7 @@ public class ExerciseFragment extends Fragment  implements GetExercisesCallback 
         exerciseRecyclerView = view.findViewById(R.id.exerciseRecyclerView);
         EditText searchEditText = view.findViewById(R.id.searchEditText);
         Button searchButtton = view.findViewById(R.id.searchButtton);
-        numberOfResultsTextView = view.findViewById(R.id.numberOfResultsTextView);
+
 
 //        Commented out is the manual code for getting exercises before using an api
         setupRecyclerView();

@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.atomicprogress.Model.Interfaces.Exercise;
@@ -43,6 +44,10 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
     private void bindExercise(ExerciseViewHolder holder, Exercise exercise, int position) {
         holder.exerciseNameTextView.setText(exercise.getExerciseName());
         holder.exerciseTypeTextView.setText(exercise.getExerciseType());
+        holder.exerciseMuscleTextView.setText(exercise.getExerciseMuscle());
+        holder.exerciseEquipmentTextView.setText(exercise.getExerciseEquipment());
+        holder.exerciseDifficultyTextView.setText(exercise.getExerciseDifficulty());
+        holder.exerciseInstructionTextView.setText(exercise.getExerciseInstructions());
         if (position % 2 == 0) {
             holder.containerLayout.setBackgroundColor(context.getResources().getColor(R.color.exercise_background_2));
         } else {
@@ -62,14 +67,19 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
     static class   ExerciseViewHolder extends RecyclerView.ViewHolder {
         TextView exerciseNameTextView;
         TextView exerciseTypeTextView;
-        LinearLayout containerLayout;
-        TextView exerciseDescriptionTextView;
         TextView exerciseMuscleTextView;
+        TextView exerciseEquipmentTextView;
         TextView exerciseDifficultyTextView;
+        TextView exerciseInstructionTextView;
+        ConstraintLayout containerLayout;
         public ExerciseViewHolder(@NonNull View itemView) {
             super(itemView);
             exerciseNameTextView = itemView.findViewById(R.id.exerciseNameTextView);
             exerciseTypeTextView = itemView.findViewById(R.id.exerciseTypeTextView);
+            exerciseMuscleTextView = itemView.findViewById(R.id.exerciseMuscleTextView);
+            exerciseEquipmentTextView = itemView.findViewById(R.id.exerciseEquipmentTextView);
+            exerciseDifficultyTextView = itemView.findViewById(R.id.exerciseDifficultyTextView);
+            exerciseInstructionTextView = itemView.findViewById(R.id.exerciseInstructionTextView);
             containerLayout = itemView.findViewById(R.id.containerLayout);
 
         }
