@@ -45,7 +45,7 @@ public class ExerciseFragment extends Fragment  implements GetExercisesCallback 
 
 
         apiHelper = new ApiHelper();
-        searchButtton.setOnClickListener(v -> search(searchEditText.getText().toString()));
+        searchButtton.setOnClickListener(v -> search(searchEditText.getText().toString(),searchEditText.getText().toString()));
 
 
 
@@ -59,8 +59,8 @@ public class ExerciseFragment extends Fragment  implements GetExercisesCallback 
         exerciseRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),layoutManager.getOrientation()));
     }
 
-    private void search(String searchTerm) {
-        apiHelper.searchExercices(searchTerm,this);
+    private void search(String searchTerm,String searchTermTwo) {
+        apiHelper.searchExercices(searchTerm,searchTermTwo,this);
 
 
     }

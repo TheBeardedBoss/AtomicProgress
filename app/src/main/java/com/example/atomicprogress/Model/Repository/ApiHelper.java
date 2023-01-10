@@ -35,9 +35,9 @@ public class ApiHelper {
                 .build();
 
     }
-    public void searchExercices(String searchTerm, GetExercisesCallback callback){
+    public void searchExercices(String searchTerm,String searchTermTwo, GetExercisesCallback callback){
         ExerciseService exerciseService = retrofit.create(ExerciseService.class);
-        Call<List<SearchResponse>> call = exerciseService.searchExercises(searchTerm);
+        Call<List<SearchResponse>> call = exerciseService.searchExercises(searchTerm,searchTermTwo);
         call.enqueue(new Callback<List<SearchResponse>>() {
             @Override
             public void onResponse(Call<List<SearchResponse>> call, Response<List<SearchResponse>> response) {
