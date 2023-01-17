@@ -19,8 +19,7 @@ public interface ExerciseService {
 
     Call<List<SearchResponse>> searchExercises(
 
-            @Query("name")String SearchTerm,
-            @Query("muscle")String SearchTermTwo
+            @Query("name")String SearchTerm
 
 
 
