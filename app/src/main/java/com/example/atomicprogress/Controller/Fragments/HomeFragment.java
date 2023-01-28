@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.atomicprogress.Controller.Activities.ProjectsActivity;
+import com.example.atomicprogress.Model.DaoSession;
+import com.example.atomicprogress.Model.ProjectDao;
 import com.example.atomicprogress.R;
 
 
@@ -42,4 +44,10 @@ public class HomeFragment extends Fragment {
         Intent intent = new Intent(this.getActivity(), ProjectsActivity.class);
         startActivity(intent);
     }
+
+
+
+
+
+
 }
