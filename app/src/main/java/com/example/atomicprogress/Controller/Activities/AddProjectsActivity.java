@@ -2,7 +2,6 @@ package com.example.atomicprogress.Controller.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,10 +12,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.atomicprogress.Model.DaoSession;
 import com.example.atomicprogress.Model.Interfaces.ProjectRepository;
 import com.example.atomicprogress.Model.Project;
-import com.example.atomicprogress.Model.ProjectDao;
 import com.example.atomicprogress.Model.Repository.ProjectData.RepositoryProvider;
 import com.example.atomicprogress.Model.Repository.ProjectData.Tags;
 import com.example.atomicprogress.R;
@@ -47,6 +44,7 @@ public class AddProjectsActivity extends AppCompatActivity {
         TextView breakTextView = findViewById(R.id.breakTextView);
         breakSpinner = findViewById(R.id.breakSpinner);
         saveButton = findViewById(R.id.saveButton);
+        Button deleteButton = findViewById(R.id.deleteButton);
 
         String[] sessions = {"10", "20", "25", "30"};
         String[] breaks = {"5", "10", "15", "20"};
@@ -86,12 +84,21 @@ public class AddProjectsActivity extends AppCompatActivity {
         saveButton.setOnClickListener(v -> saveProject());
         long projectId = getIntent().getLongExtra(Tags.PROJECT_ID, NO_PROJECT);
         if (projectId != NO_PROJECT ){
+            deleteButton.setOnClickListener(v -> deleteProject(projectId));
+            deleteButton.setVisibility(View.VISIBLE);
             project = projectRepository.getById(projectId);
             updateUI(project);
+        } else {
+            deleteButton.setVisibility(View.GONE);
         }
         
 
 
+    }
+
+    private void deleteProject(long projectId) {
+
+        projectRepository.delete(projectId);
     }
 
     private void updateUI(Project project) {

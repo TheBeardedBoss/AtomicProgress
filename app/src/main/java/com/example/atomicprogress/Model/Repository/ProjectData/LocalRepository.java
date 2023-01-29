@@ -55,6 +55,7 @@ public class LocalRepository implements ProjectRepository {
 
     @Override
     public void delete(long id) {
-
+        Project project = getById(id);
+        projectDao.delete(project);
     }
 }

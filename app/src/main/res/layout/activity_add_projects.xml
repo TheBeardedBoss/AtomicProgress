@@ -57,6 +57,22 @@
         android:background="@drawable/dark_blue_buttons"
         app:layout_constraintTop_toBottomOf="@id/breakTextView"
         />
+
+     <androidx.appcompat.widget.AppCompatButton
+         android:id="@+id/deleteButton"
+         android:text="Delete"
+         android:layout_marginBottom="10dp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:background="@drawable/round_back_blue"
+
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"/>
+
+
+
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveButton"
         android:layout_width="match_parent"
